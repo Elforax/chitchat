@@ -1,10 +1,12 @@
 package me.elforax.chitchat;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
 
@@ -40,5 +42,23 @@ public class Events implements Listener {
     public void onLeave(PlayerQuitEvent event){
         Player player = event.getPlayer();
         Database.removePlayer(player.getName());
+    }
+
+    @EventHandler
+    public void onMove(PlayerMoveEvent event){
+        Player player = event.getPlayer();
+
+        if(Database.inList(player.getName())) {
+
+            double dX = Math.abs(event.getFrom().getX() - event.getTo().getX());
+            double dY = Math.abs(event.getFrom().getY() - event.getTo().getY());
+            double dZ = Math.abs(event.getFrom().getZ() - event.getTo().getZ());
+            double exitChat = 0.1;
+            plugin.getLogger().info(ChatColor.RED + player.getName() + "-> dX:" + dX + " dY:" + dY + " dZ:" + dZ);
+            if (dX > exitChat || dY > exitChat || dZ > exitChat) {
+                Database.removePlayer(player.getName());
+            }
+        }
+
     }
 }

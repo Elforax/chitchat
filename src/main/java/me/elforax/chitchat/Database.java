@@ -56,4 +56,8 @@ public class Database {
         return chattingPlayers.keySet();
     }
 
+    public static boolean inList(String playerName){
+        return chattingPlayers.containsKey(playerName);
+    }
+
 }
