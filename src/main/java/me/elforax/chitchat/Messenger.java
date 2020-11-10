@@ -1,6 +1,7 @@
 package me.elforax.chitchat;
 
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 /**
@@ -33,6 +34,23 @@ public class Messenger {
             default:
                 plugin.getLogger().info("msgType not recognized used default instead!");
                 break;
+        }
+    }
+
+    public static void playerMsg(MassageType msgType, String playerName){
+        Player player = plugin.getServer().getPlayer(playerName);
+        if (player != null) {
+            switch (msgType) {
+                case STARTCHAT:
+                    player.sendMessage(ChatColor.GOLD + "ChatMode: " + ChatColor.GREEN + "True");
+                    break;
+                case ENDCHAT:
+                    player.sendMessage(ChatColor.GOLD + "ChatMode: " + ChatColor.RED + "False");
+                    break;
+                default:
+                    plugin.getLogger().info("msgType not recognized used default instead!");
+                    break;
+            }
         }
     }
 

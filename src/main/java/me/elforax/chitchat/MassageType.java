@@ -8,5 +8,7 @@ public enum MassageType {
     START,
     STOP,
     SCHEDULER,
-    EVENTS
+    EVENTS,
+    STARTCHAT,
+    ENDCHAT
 }

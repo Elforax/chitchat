@@ -16,6 +16,8 @@ public class Database {
         if(!(chattingPlayers.containsKey(playerName))) {
             chattingPlayers.put(playerName, "0");
             plugin.getLogger().info(ChatColor.GOLD + playerName + " Added to hashtable");
+
+            Messenger.playerMsg(MassageType.STARTCHAT, playerName);
         }else{
             plugin.getLogger().info(ChatColor.GOLD + playerName + " Was already in hashtable");
         }
@@ -25,6 +27,8 @@ public class Database {
         if(chattingPlayers.containsKey(playerName)) {
             chattingPlayers.remove(playerName);
             plugin.getLogger().info(ChatColor.GOLD + playerName + " Removed from hashtable");
+
+            Messenger.playerMsg(MassageType.ENDCHAT, playerName);
         }else{
             plugin.getLogger().info(ChatColor.GOLD + playerName + " Was not in hashtable");
         }

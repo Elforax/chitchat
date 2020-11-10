@@ -1,7 +1,6 @@
 package me.elforax.chitchat;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,8 +26,6 @@ public class Events implements Listener {
 
         if(!(msg[0] == '/' )){
             Player player = event.getPlayer();
-            player.sendMessage(ChatColor.GREEN + "You sad something :)");
-            Database.addCount(player.getName());
             Database.addPlayer(player.getName());
         }
     }
@@ -54,8 +51,11 @@ public class Events implements Listener {
             double dY = Math.abs(event.getFrom().getY() - event.getTo().getY());
             double dZ = Math.abs(event.getFrom().getZ() - event.getTo().getZ());
             double exitChat = 0.1;
+
+            // debug console msg
             plugin.getLogger().info(ChatColor.RED + player.getName() + "-> dX:" + dX + " dY:" + dY + " dZ:" + dZ);
-            if (dX > exitChat || dY > exitChat || dZ > exitChat) {
+
+            if (dX >= exitChat || dY >= exitChat || dZ >= exitChat) {
                 Database.removePlayer(player.getName());
             }
         }
