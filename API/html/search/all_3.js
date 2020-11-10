@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getplugin_7',['getPlugin',['../classme_1_1elforax_1_1chitchat_1_1_chitchat.html#a0e9f7db54c1a0570b1d12985ed555146',1,'me::elforax::chitchat::Chitchat']]]
+  ['events_8',['Events',['../classme_1_1elforax_1_1chitchat_1_1_events.html',1,'me.elforax.chitchat.Events'],['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html#a0fff11b2a050c1c2fe35b7527f6bf03e',1,'me.elforax.chitchat.MassageType.EVENTS()']]],
+  ['events_2ejava_9',['Events.java',['../_events_8java.html',1,'']]]
 ];

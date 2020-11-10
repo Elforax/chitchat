@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getplugin_37',['getPlugin',['../classme_1_1elforax_1_1chitchat_1_1_chitchat.html#a0e9f7db54c1a0570b1d12985ed555146',1,'me::elforax::chitchat::Chitchat']]]
+  ['consolemsg_50',['consoleMsg',['../classme_1_1elforax_1_1chitchat_1_1_messenger.html#a8ea9f33464f19688fb190e4f25c01b4b',1,'me::elforax::chitchat::Messenger']]]
 ];

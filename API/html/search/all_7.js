@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['plugin_19',['plugin',['../classme_1_1elforax_1_1chitchat_1_1_chitchat.html#a49cb09daa7d75330aafbfb149ee57485',1,'me.elforax.chitchat.Chitchat.plugin()'],['../classme_1_1elforax_1_1chitchat_1_1_events.html#aa56f77277278b9eff8ceb6db99ce1c6d',1,'me.elforax.chitchat.Events.plugin()'],['../classme_1_1elforax_1_1chitchat_1_1_massager.html#a6be0053a68a085b95c4c8700f700948e',1,'me.elforax.chitchat.Massager.plugin()']]]
+  ['chitchat_15',['chitchat',['../namespaceme_1_1elforax_1_1chitchat.html',1,'me::elforax']]],
+  ['elforax_16',['elforax',['../namespaceme_1_1elforax.html',1,'me']]],
+  ['massagetype_17',['MassageType',['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html',1,'me::elforax::chitchat']]],
+  ['massagetype_2ejava_18',['MassageType.java',['../_massage_type_8java.html',1,'']]],
+  ['me_19',['me',['../namespaceme.html',1,'']]],
+  ['messenger_20',['Messenger',['../classme_1_1elforax_1_1chitchat_1_1_messenger.html',1,'me::elforax::chitchat']]],
+  ['messenger_2ejava_21',['Messenger.java',['../_messenger_8java.html',1,'']]]
 ];

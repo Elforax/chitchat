@@ -1,0 +1,83 @@
+\hypertarget{classme_1_1elforax_1_1chitchat_1_1_database}{}\doxysection{me.\+elforax.\+chitchat.\+Database Class Reference}
+\label{classme_1_1elforax_1_1chitchat_1_1_database}\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a6d53f337b6bf5644bf9249a319a4d4de}{add\+Player}} (String player\+Name)
+\item 
+static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252ce00672a276b04e4d167c7bbf4}{remove\+Player}} (String player\+Name)
+\item 
+static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a7b36f534255fa5b955e9ef57ad5c7416}{add\+Count}} (String player\+Name)
+\item 
+static int \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}{get\+Count}} (String player\+Name)
+\item 
+static Set$<$ String $>$ \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}{get\+Keys}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a7fb9f54ab86c3da085b9923877de8a6d}{plugin}} = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()
+\begin{DoxyCompactList}\small\item\em Create a reference to the main class for use with Java\+Plugin extensions. \end{DoxyCompactList}\item 
+static Hashtable$<$ String, String $>$ \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_ac939885fe86f19203b43e33d846ac69b}{chatting\+Players}} = new Hashtable$<$String, String$>$()
+\begin{DoxyCompactList}\small\item\em List of Player who are active in chat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a7b36f534255fa5b955e9ef57ad5c7416}\label{classme_1_1elforax_1_1chitchat_1_1_database_a7b36f534255fa5b955e9ef57ad5c7416}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!addCount@{addCount}}
+\index{addCount@{addCount}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{addCount()}{addCount()}}
+{\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+add\+Count (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a6d53f337b6bf5644bf9249a319a4d4de}\label{classme_1_1elforax_1_1chitchat_1_1_database_a6d53f337b6bf5644bf9249a319a4d4de}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+add\+Player (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}\label{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!getCount@{getCount}}
+\index{getCount@{getCount}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily static int me.\+elforax.\+chitchat.\+Database.\+get\+Count (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}\label{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!getKeys@{getKeys}}
+\index{getKeys@{getKeys}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{getKeys()}{getKeys()}}
+{\footnotesize\ttfamily static Set$<$String$>$ me.\+elforax.\+chitchat.\+Database.\+get\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252ce00672a276b04e4d167c7bbf4}\label{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252ce00672a276b04e4d167c7bbf4}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!removePlayer@{removePlayer}}
+\index{removePlayer@{removePlayer}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{removePlayer()}{removePlayer()}}
+{\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+remove\+Player (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_ac939885fe86f19203b43e33d846ac69b}\label{classme_1_1elforax_1_1chitchat_1_1_database_ac939885fe86f19203b43e33d846ac69b}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!chattingPlayers@{chattingPlayers}}
+\index{chattingPlayers@{chattingPlayers}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{chattingPlayers}{chattingPlayers}}
+{\footnotesize\ttfamily Hashtable$<$String, String$>$ me.\+elforax.\+chitchat.\+Database.\+chatting\+Players = new Hashtable$<$String, String$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+List of Player who are active in chat. 
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a7fb9f54ab86c3da085b9923877de8a6d}\label{classme_1_1elforax_1_1chitchat_1_1_database_a7fb9f54ab86c3da085b9923877de8a6d}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!plugin@{plugin}}
+\index{plugin@{plugin}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{plugin}{plugin}}
+{\footnotesize\ttfamily final Plugin me.\+elforax.\+chitchat.\+Database.\+plugin = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Create a reference to the main class for use with Java\+Plugin extensions. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/justi/\+Documents/\+Git\+Hub projects/chitchat/src/main/java/me/elforax/chitchat/\mbox{\hyperlink{_database_8java}{Database.\+java}}\end{DoxyCompactItemize}

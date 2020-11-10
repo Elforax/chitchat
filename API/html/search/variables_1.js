@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['start_44',['START',['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html#ad55eb9c2e7f20706143a15e143157afd',1,'me::elforax::chitchat::MassageType']]],
-  ['stop_45',['STOP',['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html#a081f2497ba008cd1c0c495d9be193206',1,'me::elforax::chitchat::MassageType']]]
+  ['events_63',['EVENTS',['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html#a0fff11b2a050c1c2fe35b7527f6bf03e',1,'me::elforax::chitchat::MassageType']]]
 ];

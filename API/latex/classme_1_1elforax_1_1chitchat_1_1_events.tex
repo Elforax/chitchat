@@ -10,12 +10,14 @@ Inheritance diagram for me.\+elforax.\+chitchat.\+Events\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_events_a20daf68c336eab643b49dec8c90003ae}{on\+Chat}} (Async\+Player\+Chat\+Event event)
+\item 
+void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_events_aa7773aa6fede7abd35913016150a7bed}{on\+Leave}} (Player\+Quit\+Event event)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_events_aa56f77277278b9eff8ceb6db99ce1c6d}{plugin}} = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()
-\begin{DoxyCompactList}\small\item\em Create a reference to the main class for use with Java\+Plugin extentions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static final Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_events_a2238c2ef191de58152b362f37bcb5b93}{plugin}} = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()
+\begin{DoxyCompactList}\small\item\em Create a reference to the main class for use with Java\+Plugin extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -28,8 +30,18 @@ static Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_events_aa56f77
 \doxysubsubsection{\texorpdfstring{onChat()}{onChat()}}
 {\footnotesize\ttfamily void me.\+elforax.\+chitchat.\+Events.\+on\+Chat (\begin{DoxyParamCaption}\item[{Async\+Player\+Chat\+Event}]{event }\end{DoxyParamCaption})}
 
-everytime a chat message is send and it doesnt start with \textquotesingle{}/\textquotesingle{} the plugin will~\newline
-add the player to the Chatting\+Players list to indicate they are speaking 
+everytime a chat message is send and it doesnt start with \textquotesingle{}/\textquotesingle{} the plugin will add the player who send the message to the Chatting\+Players list to indicate they are speaking 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_events_aa7773aa6fede7abd35913016150a7bed}\label{classme_1_1elforax_1_1chitchat_1_1_events_aa7773aa6fede7abd35913016150a7bed}} 
+\index{me.elforax.chitchat.Events@{me.elforax.chitchat.Events}!onLeave@{onLeave}}
+\index{onLeave@{onLeave}!me.elforax.chitchat.Events@{me.elforax.chitchat.Events}}
+\doxysubsubsection{\texorpdfstring{onLeave()}{onLeave()}}
+{\footnotesize\ttfamily void me.\+elforax.\+chitchat.\+Events.\+on\+Leave (\begin{DoxyParamCaption}\item[{Player\+Quit\+Event}]{event }\end{DoxyParamCaption})}
+
+When a player leaves the server they will be removed from the Chatting\+Players list if they are on the list 
 \begin{DoxyParams}{Parameters}
 {\em event} & \\
 \hline
@@ -37,15 +49,15 @@ add the player to the Chatting\+Players list to indicate they are speaking
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_events_aa56f77277278b9eff8ceb6db99ce1c6d}\label{classme_1_1elforax_1_1chitchat_1_1_events_aa56f77277278b9eff8ceb6db99ce1c6d}} 
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_events_a2238c2ef191de58152b362f37bcb5b93}\label{classme_1_1elforax_1_1chitchat_1_1_events_a2238c2ef191de58152b362f37bcb5b93}} 
 \index{me.elforax.chitchat.Events@{me.elforax.chitchat.Events}!plugin@{plugin}}
 \index{plugin@{plugin}!me.elforax.chitchat.Events@{me.elforax.chitchat.Events}}
 \doxysubsubsection{\texorpdfstring{plugin}{plugin}}
-{\footnotesize\ttfamily Plugin me.\+elforax.\+chitchat.\+Events.\+plugin = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily final Plugin me.\+elforax.\+chitchat.\+Events.\+plugin = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
-Create a reference to the main class for use with Java\+Plugin extentions. 
+Create a reference to the main class for use with Java\+Plugin extensions. 
 
 
 
