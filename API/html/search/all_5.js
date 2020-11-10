@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['plugin_15',['plugin',['../classme_1_1elforax_1_1chitchat_1_1_chitchat.html#a49cb09daa7d75330aafbfb149ee57485',1,'me.elforax.chitchat.Chitchat.plugin()'],['../classme_1_1elforax_1_1chitchat_1_1_massager.html#a6be0053a68a085b95c4c8700f700948e',1,'me.elforax.chitchat.Massager.plugin()']]]
+  ['chitchat_9',['chitchat',['../namespaceme_1_1elforax_1_1chitchat.html',1,'me::elforax']]],
+  ['elforax_10',['elforax',['../namespaceme_1_1elforax.html',1,'me']]],
+  ['massager_11',['Massager',['../classme_1_1elforax_1_1chitchat_1_1_massager.html',1,'me::elforax::chitchat']]],
+  ['massager_2ejava_12',['Massager.java',['../_massager_8java.html',1,'']]],
+  ['massagetype_13',['MassageType',['../enumme_1_1elforax_1_1chitchat_1_1_massage_type.html',1,'me::elforax::chitchat']]],
+  ['massagetype_2ejava_14',['MassageType.java',['../_massage_type_8java.html',1,'']]],
+  ['me_15',['me',['../namespaceme.html',1,'']]]
 ];

@@ -2,9 +2,11 @@ package me.elforax.chitchat;
 
 /**
  * MassageType is used to quickly find and add messages in combination with
- * \link Massager.java
+ * \link Messager.java
  */
 public enum MassageType {
     START,
-    STOP
+    STOP,
+    SCHEDULER,
+    EVENTS
 }
