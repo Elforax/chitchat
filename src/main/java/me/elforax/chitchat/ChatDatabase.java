@@ -34,7 +34,9 @@ public class ChatDatabase {
                 Messenger.playerMsg(MessageType.STARTCHAT, playerName);
             }
         }else{
-            Messenger.consoleMsg(MessageType.PLAYER_FOUND, playerName);
+            if(ConfigData.debug) {
+                Messenger.consoleMsg(MessageType.PLAYER_FOUND, playerName);
+            }
         }
     }
 
