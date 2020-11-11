@@ -1,6 +1,5 @@
 package me.elforax.chitchat;
 
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,7 +25,7 @@ public class Events implements Listener {
 
         if(!(msg[0] == '/' )){
             Player player = event.getPlayer();
-            Database.addPlayer(player.getName());
+            ChatDatabase.addPlayer(player.getName());
         }
     }
 
@@ -38,7 +37,7 @@ public class Events implements Listener {
     @EventHandler
     public void onLeave(PlayerQuitEvent event){
         Player player = event.getPlayer();
-        Database.removePlayer(player.getName());
+        ChatDatabase.removePlayer(player.getName());
     }
 
     /**
@@ -49,7 +48,7 @@ public class Events implements Listener {
     public void onMove(PlayerMoveEvent event){
         Player player = event.getPlayer();
 
-        if(Database.inList(player.getName())) {
+        if(ChatDatabase.inList(player.getName()) && ConfigData.disableOnMove) {
 
             double dX = Math.abs(event.getFrom().getX() - event.getTo().getX());
             double dY = Math.abs(event.getFrom().getY() - event.getTo().getY());
@@ -57,12 +56,11 @@ public class Events implements Listener {
             double exitChat = 0.1;
 
             // debug console msg
-            plugin.getLogger().info(ChatColor.RED + player.getName() + "-> dX:" + dX + " dY:" + dY + " dZ:" + dZ);
+            //plugin.getLogger().info(ChatColor.RED + player.getName() + "-> dX:" + dX + " dY:" + dY + " dZ:" + dZ);
 
             if (dX >= exitChat || dY >= exitChat || dZ >= exitChat) {
-                Database.removePlayer(player.getName());
+                ChatDatabase.removePlayer(player.getName());
             }
         }
-
     }
 }

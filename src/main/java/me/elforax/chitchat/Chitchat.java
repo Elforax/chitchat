@@ -19,13 +19,17 @@ public final class Chitchat extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this; //!< Make a object of the plugin to reference externally form the main pointing to main class
-        Messenger.consoleMsg(MassageType.START);
+        Messenger.consoleMsg(MessageType.START);
+
+        Messenger.consoleMsg(MessageType.CONFIG_INIT);
+        ConfigData.init();
+        ConfigData.readConfig();
 
         // Register More Event listeners to this if required\
-        Messenger.consoleMsg(MassageType.EVENTS);
+        Messenger.consoleMsg(MessageType.EVENTS);
         registerEvents(this, new Events());
 
-        Messenger.consoleMsg(MassageType.SCHEDULER);
+        Messenger.consoleMsg(MessageType.SCHEDULER);
         Scheduler.initialization();
 
     }
@@ -35,7 +39,7 @@ public final class Chitchat extends JavaPlugin {
      */
     @Override
     public void onDisable() {
-        Messenger.consoleMsg(MassageType.STOP);
+        Messenger.consoleMsg(MessageType.STOP);
 
         // plugin -> null always last!
         plugin = null; //!< Releases memory held by plugin on shutdown

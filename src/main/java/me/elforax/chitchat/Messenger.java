@@ -15,11 +15,25 @@ public class Messenger {
      * Adds pre set messages to console for quick and simple message controls in other classes
      * @param msgType
      */
-    public static void consoleMsg(MassageType msgType){
+    public static void consoleMsg(MessageType msgType){
         switch (msgType){
             case START:
                 header();
                 plugin.getLogger().info(ChatColor.GREEN + "Initializing Main...");
+                break;
+            case CONFIG_INIT:
+                plugin.getLogger().info(ChatColor.GREEN + "Reading Config...");
+                break;
+            case CONFIG_VALUES:
+                plugin.getLogger().info(ChatColor.AQUA + "config: debug mode = " + ConfigData.debug);
+                plugin.getLogger().info(ChatColor.AQUA + "config: disable on move = " + ConfigData.disableOnMove);
+
+                plugin.getLogger().info(ChatColor.AQUA + "config: effect Y offset = " + ConfigData.particleOffsetY + " Blocks");
+                plugin.getLogger().info(ChatColor.AQUA + "config: effect period = " + ConfigData.effect_period + " Ticks");
+
+                plugin.getLogger().info(ChatColor.AQUA + "config: worker period = " + ConfigData.period + " Ticks");
+                plugin.getLogger().info(ChatColor.AQUA + "config: idle time = " + ConfigData.idle_time + " Ticks");
+
                 break;
             case SCHEDULER:
                 plugin.getLogger().info(ChatColor.GREEN + "Initializing Scheduler...");
@@ -43,7 +57,7 @@ public class Messenger {
      * @param msgType
      * @param playerName
      */
-    public static  void consoleMsg(MassageType msgType, String playerName){
+    public static  void consoleMsg(MessageType msgType, String playerName){
         switch (msgType){
             case PLAYER_NOT_FOUND:
                 plugin.getLogger().info(ChatColor.GOLD + playerName + " Was not in hashtable");
@@ -68,7 +82,7 @@ public class Messenger {
      * @param msgType message type to be send
      * @param playerName receiving players name
      */
-    public static void playerMsg(MassageType msgType, String playerName){
+    public static void playerMsg(MessageType msgType, String playerName){
         Player player = plugin.getServer().getPlayer(playerName);
         if (player != null) {
             switch (msgType) {

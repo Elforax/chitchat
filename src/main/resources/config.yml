@@ -1,0 +1,18 @@
+# General settings
+# Stops the chat mode when player walks away
+disableOnMove: true
+
+# Schedule Worker settings
+workers:
+  # Chat Effect offset {3.0} ~ 3 blocks from players feet
+  effect:
+    offset_y: 3.0
+  # Effect Worker period in Ticks {5} ~ 0.2 Sec
+  effect_period: 5
+  # Worker period in Ticks {20} ~ 1 Sec
+  period: 20
+  # Worker Check Ticks until player is removed {200} ~ 10 Sec
+  idle_time: 200
+
+#Debug mode
+debug: false

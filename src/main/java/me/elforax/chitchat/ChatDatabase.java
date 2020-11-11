@@ -1,16 +1,24 @@
 package me.elforax.chitchat;
 
 import org.bukkit.ChatColor;
+
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Set;
+import java.util.logging.Level;
 
 
-public class Database {
+public class ChatDatabase {
     private static final Plugin plugin = Chitchat.getPlugin(); //!< Create a reference to the main class for use with JavaPlugin extensions
     private static Hashtable<String, String> chattingPlayers = new Hashtable<String, String>(); //!< List of Player who are active in chat
-
 
     /**
      * Adds a player to the hashtable of chattingPlayers
@@ -19,11 +27,14 @@ public class Database {
     public static void addPlayer(String playerName){
         if(!(inList(playerName))) {
             chattingPlayers.put(playerName, "0");
-            Messenger.consoleMsg(MassageType.PLAYER_ADDED, playerName);
 
-            Messenger.playerMsg(MassageType.STARTCHAT, playerName);
+            if(ConfigData.debug) {
+                Messenger.consoleMsg(MessageType.PLAYER_ADDED, playerName);
+            }
+
+            Messenger.playerMsg(MessageType.STARTCHAT, playerName);
         }else{
-            Messenger.consoleMsg(MassageType.PLAYER_FOUND, playerName);
+            Messenger.consoleMsg(MessageType.PLAYER_FOUND, playerName);
         }
     }
 
@@ -34,11 +45,13 @@ public class Database {
     public static void removePlayer(String playerName){
         if(inList(playerName)) {
             chattingPlayers.remove(playerName);
-            Messenger.consoleMsg(MassageType.PLAYER_REMOVED, playerName);
+            if(ConfigData.debug) {
+                Messenger.consoleMsg(MessageType.PLAYER_REMOVED, playerName);
+            }
 
-            Messenger.playerMsg(MassageType.ENDCHAT, playerName);
+            Messenger.playerMsg(MessageType.ENDCHAT, playerName);
         }else{
-            Messenger.consoleMsg(MassageType.PLAYER_NOT_FOUND, playerName);
+            Messenger.consoleMsg(MessageType.PLAYER_NOT_FOUND, playerName);
         }
     }
 
@@ -54,9 +67,11 @@ public class Database {
             chattingPlayers.put(playerName, result);
 
             //Debug logger
-            plugin.getLogger().info(ChatColor.GOLD + playerName + " counter updated to " + result);
+            if(ConfigData.debug) {
+                plugin.getLogger().info(ChatColor.GOLD + playerName + " counter updated to " + result);
+            }
         }else {
-            Messenger.consoleMsg(MassageType.PLAYER_NOT_FOUND, playerName);
+            Messenger.consoleMsg(MessageType.PLAYER_NOT_FOUND, playerName);
         }
     }
 
@@ -69,9 +84,11 @@ public class Database {
             chattingPlayers.put(playerName, "0");
 
             //Debug logger
-            plugin.getLogger().info(ChatColor.GOLD + playerName + " counter reset to 0");
+            if(ConfigData.debug) {
+                plugin.getLogger().info(ChatColor.GOLD + playerName + " counter reset to 0");
+            }
         }else {
-            Messenger.consoleMsg(MassageType.PLAYER_NOT_FOUND, playerName);
+            Messenger.consoleMsg(MessageType.PLAYER_NOT_FOUND, playerName);
         }
     }
 
@@ -86,7 +103,7 @@ public class Database {
             String valueStr = chattingPlayers.get(playerName);
             return Integer.parseInt(valueStr);
         }else {
-            Messenger.consoleMsg(MassageType.PLAYER_NOT_FOUND, playerName);
+            Messenger.consoleMsg(MessageType.PLAYER_NOT_FOUND, playerName);
             return 0;
         }
     }
@@ -110,3 +127,4 @@ public class Database {
     }
 
 }
+

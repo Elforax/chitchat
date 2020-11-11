@@ -13,16 +13,16 @@ import java.util.Set;
  * Scheduler class used to setup the Schedule workers and there tasks
  */
 public class Scheduler {
-    private static Plugin plugin = Chitchat.getPlugin(); //!< Create a reference to the main class for use with JavaPlugin extensions
+    private static final Plugin plugin = Chitchat.getPlugin(); //!< Create a reference to the main class for use with JavaPlugin extensions
+    private static BukkitScheduler scheduler = plugin.getServer().getScheduler();
 
     /**
      * Sets up the schedule workers
      */
     public static void initialization(){
-        BukkitScheduler scheduler = plugin.getServer().getScheduler();
-        scheduler.scheduleSyncRepeatingTask(plugin, new addChatListCount(),0l, 20l); //TODO make fix period time a variable retrieved from a config file
-        scheduler.scheduleSyncRepeatingTask(plugin, new timeoutChatList(),0l, 25l); //TODO make fix period time a variable retrieved from a config file
-        scheduler.scheduleSyncRepeatingTask(plugin, new ChatEffects(),0l, 5l); //TODO make fix period time a variable retrieved from a config file
+        scheduler.scheduleSyncRepeatingTask(plugin, new addChatListCount(),0L, ConfigData.period);
+        scheduler.scheduleSyncRepeatingTask(plugin, new timeoutChatList(),0L, ConfigData.period);
+        scheduler.scheduleSyncRepeatingTask(plugin, new ChatEffects(),0L, ConfigData.effect_period);
     }
 }
 
@@ -32,9 +32,9 @@ public class Scheduler {
 class addChatListCount implements Runnable{
     @Override
     public void run() {
-        Set<String> keys = Database.getKeys();
+        Set<String> keys = ChatDatabase.getKeys();
         for(String key : keys){
-            Database.addCount(key);
+            ChatDatabase.addCount(key);
         }
     }
 }
@@ -44,13 +44,17 @@ class addChatListCount implements Runnable{
  */
 class timeoutChatList implements Runnable{
     private static final Plugin plugin = Chitchat.getPlugin();
+
+    //!< Calculates the repeat times based on the scheduler period and the idle time from config { 200 idle and 20 period = 10 repeats }
+    private static final int idle_repeat = (int)Math.ceil((double)ConfigData.idle_time/(double)ConfigData.period);
+
     @Override
     public void run() {
-        Set<String> keys = Database.getKeys();
+        Set<String> keys = ChatDatabase.getKeys();
         for(String key : keys){
-            int count = Database.getCount(key);
-            if(count >= 10){ //TODO make fix int a variable retrieved from a config file
-                Database.removePlayer(key);
+            int count = ChatDatabase.getCount(key);
+            if(count >= idle_repeat){
+                ChatDatabase.removePlayer(key);
             }
         }
     }
@@ -61,17 +65,31 @@ class timeoutChatList implements Runnable{
  */
 class ChatEffects implements Runnable{
     private static final Plugin plugin = Chitchat.getPlugin();
+
+    private static String getChatEffect(String particle){
+        if (particle != null) {
+            particle = particle.toUpperCase();
+            for (Particle p : Particle.values()) {
+                if (p.name().equals(particle));
+                return p.name();
+            }
+        }
+        plugin.getLogger().warning("config: chat effect value not valid using default instead");
+        return "END_ROD";
+    }
+
     @Override
     public void run() {
-        Set<String> keys = Database.getKeys();
+        Set<String> keys = ChatDatabase.getKeys();
         for(String key : keys) {
             Player player = plugin.getServer().getPlayer(key);
             if (player != null) {
-                //player.sendMessage("Spam ;)");
                 World world = player.getWorld();
                 Location loc = player.getLocation();
-                loc.add(0,3.0,0);
-                world.spawnParticle(Particle.END_ROD, loc, 1, 0, 0 ,0 , 0);
+
+                loc.add(0,ConfigData.particleOffsetY,0);
+
+                world.spawnParticle(Particle.END_ROD , loc, 1, 0, 0 ,0 , 0);
             }
         }
     }
