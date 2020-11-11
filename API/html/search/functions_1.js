@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['consolemsg_60',['consoleMsg',['../classme_1_1elforax_1_1chitchat_1_1_messenger.html#a8ea9f33464f19688fb190e4f25c01b4b',1,'me.elforax.chitchat.Messenger.consoleMsg(MassageType msgType)'],['../classme_1_1elforax_1_1chitchat_1_1_messenger.html#ad10a498addde1667e69ae131d3ed1164',1,'me.elforax.chitchat.Messenger.consoleMsg(MassageType msgType, String playerName)']]]
+  ['consolemsg_74',['consoleMsg',['../classme_1_1elforax_1_1chitchat_1_1_messenger.html#a0a6469d0f2e2a334b67e0fede040f1d6',1,'me.elforax.chitchat.Messenger.consoleMsg(MessageType msgType)'],['../classme_1_1elforax_1_1chitchat_1_1_messenger.html#a1d2441a052f09194b2bb694fab058bc4',1,'me.elforax.chitchat.Messenger.consoleMsg(MessageType msgType, String playerName)']]]
 ];

@@ -8,8 +8,10 @@ static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_scheduler_ab2b3c
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_scheduler_ae166b66b2a34d12675018b43f3e329d0}{plugin}} = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()
-\begin{DoxyCompactList}\small\item\em Create a reference to the main class for use with Java\+Plugin extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static final Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_scheduler_a1bc50a0de4f54674f50886da8196730c}{plugin}} = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()
+\begin{DoxyCompactList}\small\item\em Create a reference to the main class for use with Java\+Plugin extensions. \end{DoxyCompactList}\item 
+static Bukkit\+Scheduler \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_scheduler_a6f69ba60ca7072eaa06b10a46be44e07}{scheduler}} = plugin.\+get\+Server().get\+Scheduler()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -25,15 +27,21 @@ static Plugin \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_scheduler_ae16
 Sets up the schedule workers 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_scheduler_ae166b66b2a34d12675018b43f3e329d0}\label{classme_1_1elforax_1_1chitchat_1_1_scheduler_ae166b66b2a34d12675018b43f3e329d0}} 
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_scheduler_a1bc50a0de4f54674f50886da8196730c}\label{classme_1_1elforax_1_1chitchat_1_1_scheduler_a1bc50a0de4f54674f50886da8196730c}} 
 \index{me.elforax.chitchat.Scheduler@{me.elforax.chitchat.Scheduler}!plugin@{plugin}}
 \index{plugin@{plugin}!me.elforax.chitchat.Scheduler@{me.elforax.chitchat.Scheduler}}
 \doxysubsubsection{\texorpdfstring{plugin}{plugin}}
-{\footnotesize\ttfamily Plugin me.\+elforax.\+chitchat.\+Scheduler.\+plugin = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily final Plugin me.\+elforax.\+chitchat.\+Scheduler.\+plugin = \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_chitchat_a0e9f7db54c1a0570b1d12985ed555146}{Chitchat.\+get\+Plugin}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
 Create a reference to the main class for use with Java\+Plugin extensions. 
+
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_scheduler_a6f69ba60ca7072eaa06b10a46be44e07}\label{classme_1_1elforax_1_1chitchat_1_1_scheduler_a6f69ba60ca7072eaa06b10a46be44e07}} 
+\index{me.elforax.chitchat.Scheduler@{me.elforax.chitchat.Scheduler}!scheduler@{scheduler}}
+\index{scheduler@{scheduler}!me.elforax.chitchat.Scheduler@{me.elforax.chitchat.Scheduler}}
+\doxysubsubsection{\texorpdfstring{scheduler}{scheduler}}
+{\footnotesize\ttfamily Bukkit\+Scheduler me.\+elforax.\+chitchat.\+Scheduler.\+scheduler = plugin.\+get\+Server().get\+Scheduler()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
