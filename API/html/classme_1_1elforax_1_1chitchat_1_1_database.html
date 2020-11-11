@@ -82,6 +82,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aaf3252ce00672a276b04e4d167c7bbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b36f534255fa5b955e9ef57ad5c7416"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_database.html#a7b36f534255fa5b955e9ef57ad5c7416">addCount</a> (String playerName)</td></tr>
 <tr class="separator:a7b36f534255fa5b955e9ef57ad5c7416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec1d9998849bb4220f770d41142db16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_database.html#a3ec1d9998849bb4220f770d41142db16">resetCount</a> (String playerName)</td></tr>
+<tr class="separator:a3ec1d9998849bb4220f770d41142db16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9719d23e3b5f6850519769e92e8218"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_database.html#a0b9719d23e3b5f6850519769e92e8218">getCount</a> (String playerName)</td></tr>
 <tr class="separator:a0b9719d23e3b5f6850519769e92e8218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ef4995313ca1a9c8aa029b3a634a27"><td class="memItemLeft" align="right" valign="top">static Set&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_database.html#af4ef4995313ca1a9c8aa029b3a634a27">getKeys</a> ()</td></tr>
@@ -122,6 +124,12 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Adds 1 to the counter of a given player </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -148,6 +156,12 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Adds a player to the hashtable of chattingPlayers </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -174,6 +188,13 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Gets the current chatmode counter value for a given player </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer value of the counter form a given player </dd></dl>
 
 </div>
 </div>
@@ -199,6 +220,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>returns the list op chatting players in the hashtable </p><dl class="section return"><dt>Returns</dt><dd>Set of keys (list of playerNames form the hashtable) </dd></dl>
 
 </div>
 </div>
@@ -225,6 +247,13 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>checks if a player is in the hashtable for chattingPlayers </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td>requires the players name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean value if the player is in the list true else false </dd></dl>
 
 </div>
 </div>
@@ -251,6 +280,44 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Removes a player from the hashtable of chattingPlayers </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ec1d9998849bb4220f770d41142db16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec1d9998849bb4220f770d41142db16">&#9670;&nbsp;</a></span>resetCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void me.elforax.chitchat.Database.resetCount </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>playerName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>resets a given players chat counter </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

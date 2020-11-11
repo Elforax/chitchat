@@ -5,6 +5,8 @@
 \item 
 static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_messenger_a8ea9f33464f19688fb190e4f25c01b4b}{console\+Msg}} (\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}} msg\+Type)
 \item 
+static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_messenger_ad10a498addde1667e69ae131d3ed1164}{console\+Msg}} (\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}} msg\+Type, String player\+Name)
+\item 
 static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_messenger_abed9ccc0304149090085f8710602aec0}{player\+Msg}} (\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}} msg\+Type, String player\+Name)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Private Member Functions}
@@ -26,12 +28,25 @@ Massager Class is used to place messages in a central place
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_messenger_a8ea9f33464f19688fb190e4f25c01b4b}\label{classme_1_1elforax_1_1chitchat_1_1_messenger_a8ea9f33464f19688fb190e4f25c01b4b}} 
 \index{me.elforax.chitchat.Messenger@{me.elforax.chitchat.Messenger}!consoleMsg@{consoleMsg}}
 \index{consoleMsg@{consoleMsg}!me.elforax.chitchat.Messenger@{me.elforax.chitchat.Messenger}}
-\doxysubsubsection{\texorpdfstring{consoleMsg()}{consoleMsg()}}
+\doxysubsubsection{\texorpdfstring{consoleMsg()}{consoleMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Messenger.\+console\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}}}]{msg\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Console Message Controller Adds pre set messages to console for quick and simple message controls in other classes 
 \begin{DoxyParams}{Parameters}
 {\em msg\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_messenger_ad10a498addde1667e69ae131d3ed1164}\label{classme_1_1elforax_1_1chitchat_1_1_messenger_ad10a498addde1667e69ae131d3ed1164}} 
+\index{me.elforax.chitchat.Messenger@{me.elforax.chitchat.Messenger}!consoleMsg@{consoleMsg}}
+\index{consoleMsg@{consoleMsg}!me.elforax.chitchat.Messenger@{me.elforax.chitchat.Messenger}}
+\doxysubsubsection{\texorpdfstring{consoleMsg()}{consoleMsg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Messenger.\+console\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}}}]{msg\+Type,  }\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sends a preset message to the console with information about a given player 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Type} & \\
+\hline
+{\em player\+Name} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_messenger_a35b0890a23926696b7c0cc60fd3e6d8b}\label{classme_1_1elforax_1_1chitchat_1_1_messenger_a35b0890a23926696b7c0cc60fd3e6d8b}} 
@@ -46,6 +61,13 @@ Header for use in console to make finding the plugins messages easier \mbox{\Hyp
 \doxysubsubsection{\texorpdfstring{playerMsg()}{playerMsg()}}
 {\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Messenger.\+player\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumme_1_1elforax_1_1chitchat_1_1_massage_type}{Massage\+Type}}}]{msg\+Type,  }\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Sends a preset message to a given player 
+\begin{DoxyParams}{Parameters}
+{\em msg\+Type} & message type to be send \\
+\hline
+{\em player\+Name} & receiving players name \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}

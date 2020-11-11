@@ -9,6 +9,8 @@ static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252
 \item 
 static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a7b36f534255fa5b955e9ef57ad5c7416}{add\+Count}} (String player\+Name)
 \item 
+static void \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a3ec1d9998849bb4220f770d41142db16}{reset\+Count}} (String player\+Name)
+\item 
 static int \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}{get\+Count}} (String player\+Name)
 \item 
 static Set$<$ String $>$ \mbox{\hyperlink{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}{get\+Keys}} ()
@@ -31,36 +33,81 @@ static Hashtable$<$ String, String $>$ \mbox{\hyperlink{classme_1_1elforax_1_1ch
 \doxysubsubsection{\texorpdfstring{addCount()}{addCount()}}
 {\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+add\+Count (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Adds 1 to the counter of a given player 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a6d53f337b6bf5644bf9249a319a4d4de}\label{classme_1_1elforax_1_1chitchat_1_1_database_a6d53f337b6bf5644bf9249a319a4d4de}} 
 \index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!addPlayer@{addPlayer}}
 \index{addPlayer@{addPlayer}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
 \doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
 {\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+add\+Player (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Adds a player to the hashtable of chatting\+Players 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}\label{classme_1_1elforax_1_1chitchat_1_1_database_a0b9719d23e3b5f6850519769e92e8218}} 
 \index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!getCount@{getCount}}
 \index{getCount@{getCount}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
 \doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
 {\footnotesize\ttfamily static int me.\+elforax.\+chitchat.\+Database.\+get\+Count (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Gets the current chatmode counter value for a given player 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the counter form a given player 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}\label{classme_1_1elforax_1_1chitchat_1_1_database_af4ef4995313ca1a9c8aa029b3a634a27}} 
 \index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!getKeys@{getKeys}}
 \index{getKeys@{getKeys}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
 \doxysubsubsection{\texorpdfstring{getKeys()}{getKeys()}}
 {\footnotesize\ttfamily static Set$<$String$>$ me.\+elforax.\+chitchat.\+Database.\+get\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+returns the list op chatting players in the hashtable \begin{DoxyReturn}{Returns}
+Set of keys (list of player\+Names form the hashtable) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a6a57113f44ec06d9f48be244d60bbd86}\label{classme_1_1elforax_1_1chitchat_1_1_database_a6a57113f44ec06d9f48be244d60bbd86}} 
 \index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!inList@{inList}}
 \index{inList@{inList}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
 \doxysubsubsection{\texorpdfstring{inList()}{inList()}}
 {\footnotesize\ttfamily static boolean me.\+elforax.\+chitchat.\+Database.\+in\+List (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+checks if a player is in the hashtable for chatting\+Players 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & requires the players name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value if the player is in the list true else false 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252ce00672a276b04e4d167c7bbf4}\label{classme_1_1elforax_1_1chitchat_1_1_database_aaf3252ce00672a276b04e4d167c7bbf4}} 
 \index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!removePlayer@{removePlayer}}
 \index{removePlayer@{removePlayer}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
 \doxysubsubsection{\texorpdfstring{removePlayer()}{removePlayer()}}
 {\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+remove\+Player (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Removes a player from the hashtable of chatting\+Players 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classme_1_1elforax_1_1chitchat_1_1_database_a3ec1d9998849bb4220f770d41142db16}\label{classme_1_1elforax_1_1chitchat_1_1_database_a3ec1d9998849bb4220f770d41142db16}} 
+\index{me.elforax.chitchat.Database@{me.elforax.chitchat.Database}!resetCount@{resetCount}}
+\index{resetCount@{resetCount}!me.elforax.chitchat.Database@{me.elforax.chitchat.Database}}
+\doxysubsubsection{\texorpdfstring{resetCount()}{resetCount()}}
+{\footnotesize\ttfamily static void me.\+elforax.\+chitchat.\+Database.\+reset\+Count (\begin{DoxyParamCaption}\item[{String}]{player\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+resets a given players chat counter 
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}

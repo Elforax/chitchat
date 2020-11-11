@@ -79,6 +79,8 @@ $(function() {
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ea9f33464f19688fb190e4f25c01b4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_messenger.html#a8ea9f33464f19688fb190e4f25c01b4b">consoleMsg</a> (<a class="el" href="enumme_1_1elforax_1_1chitchat_1_1_massage_type.html">MassageType</a> msgType)</td></tr>
 <tr class="separator:a8ea9f33464f19688fb190e4f25c01b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10a498addde1667e69ae131d3ed1164"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_messenger.html#ad10a498addde1667e69ae131d3ed1164">consoleMsg</a> (<a class="el" href="enumme_1_1elforax_1_1chitchat_1_1_massage_type.html">MassageType</a> msgType, String playerName)</td></tr>
+<tr class="separator:ad10a498addde1667e69ae131d3ed1164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed9ccc0304149090085f8710602aec0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classme_1_1elforax_1_1chitchat_1_1_messenger.html#abed9ccc0304149090085f8710602aec0">playerMsg</a> (<a class="el" href="enumme_1_1elforax_1_1chitchat_1_1_massage_type.html">MassageType</a> msgType, String playerName)</td></tr>
 <tr class="separator:abed9ccc0304149090085f8710602aec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -97,7 +99,7 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p>Massager Class is used to place messages in a central place </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8ea9f33464f19688fb190e4f25c01b4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ea9f33464f19688fb190e4f25c01b4b">&#9670;&nbsp;</a></span>consoleMsg()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea9f33464f19688fb190e4f25c01b4b">&#9670;&nbsp;</a></span>consoleMsg() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,6 +124,49 @@ Static Private Attributes</h2></td></tr>
 <p>Console Message Controller Adds pre set messages to console for quick and simple message controls in other classes </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msgType</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad10a498addde1667e69ae131d3ed1164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10a498addde1667e69ae131d3ed1164">&#9670;&nbsp;</a></span>consoleMsg() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void me.elforax.chitchat.Messenger.consoleMsg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumme_1_1elforax_1_1chitchat_1_1_massage_type.html">MassageType</a>&#160;</td>
+          <td class="paramname"><em>msgType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>playerName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sends a preset message to the console with information about a given player </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msgType</td><td></td></tr>
+    <tr><td class="paramname">playerName</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -187,6 +232,13 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sends a preset message to a given player </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msgType</td><td>message type to be send </td></tr>
+    <tr><td class="paramname">playerName</td><td>receiving players name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
