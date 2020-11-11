@@ -10,5 +10,9 @@ public enum MassageType {
     SCHEDULER,
     EVENTS,
     STARTCHAT,
-    ENDCHAT
+    ENDCHAT,
+    PLAYER_NOT_FOUND,
+    PLAYER_FOUND,
+    PLAYER_ADDED,
+    PLAYER_REMOVED
 }

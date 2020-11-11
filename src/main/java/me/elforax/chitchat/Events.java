@@ -41,6 +41,10 @@ public class Events implements Listener {
         Database.removePlayer(player.getName());
     }
 
+    /**
+     * When a player moves and they are in the hashtable remove them from the table
+     * @param event
+     */
     @EventHandler
     public void onMove(PlayerMoveEvent event){
         Player player = event.getPlayer();

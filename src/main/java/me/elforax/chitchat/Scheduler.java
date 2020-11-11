@@ -1,6 +1,5 @@
 package me.elforax.chitchat;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.World;
@@ -10,9 +9,15 @@ import org.bukkit.scheduler.BukkitScheduler;
 
 import java.util.Set;
 
+/**
+ * Scheduler class used to setup the Schedule workers and there tasks
+ */
 public class Scheduler {
     private static Plugin plugin = Chitchat.getPlugin(); //!< Create a reference to the main class for use with JavaPlugin extensions
 
+    /**
+     * Sets up the schedule workers
+     */
     public static void initialization(){
         BukkitScheduler scheduler = plugin.getServer().getScheduler();
         scheduler.scheduleSyncRepeatingTask(plugin, new addChatListCount(),0l, 20l); //TODO make fix period time a variable retrieved from a config file
@@ -21,6 +26,9 @@ public class Scheduler {
     }
 }
 
+/**
+ * Schedule worker adds to the counter of players in the chattingPlayers hashtable
+ */
 class addChatListCount implements Runnable{
     @Override
     public void run() {
@@ -31,6 +39,9 @@ class addChatListCount implements Runnable{
     }
 }
 
+/**
+ * Schedule worker removes players who are not chatting
+ */
 class timeoutChatList implements Runnable{
     private static final Plugin plugin = Chitchat.getPlugin();
     @Override
@@ -45,6 +56,9 @@ class timeoutChatList implements Runnable{
     }
 }
 
+/**
+ * Schedule worker that adds effects to a player who it in the chattingPlayer hashtable
+ */
 class ChatEffects implements Runnable{
     private static final Plugin plugin = Chitchat.getPlugin();
     @Override
