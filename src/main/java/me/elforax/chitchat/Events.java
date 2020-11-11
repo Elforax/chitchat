@@ -21,7 +21,7 @@ public class Events implements Listener {
      * @param event
      */
     @EventHandler
-    public void onChat(AsyncPlayerChatEvent event){
+    public void onChat(AsyncPlayerChatEvent event){     //TODO Add reset time when chat is send
         char[] msg = event.getMessage().toCharArray();
 
         if(!(msg[0] == '/' )){
