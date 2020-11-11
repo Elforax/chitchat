@@ -30,9 +30,9 @@ public class ChatDatabase {
 
             if(ConfigData.debug) {
                 Messenger.consoleMsg(MessageType.PLAYER_ADDED, playerName);
-            }
 
-            Messenger.playerMsg(MessageType.STARTCHAT, playerName);
+                Messenger.playerMsg(MessageType.STARTCHAT, playerName);
+            }
         }else{
             Messenger.consoleMsg(MessageType.PLAYER_FOUND, playerName);
         }
@@ -47,9 +47,9 @@ public class ChatDatabase {
             chattingPlayers.remove(playerName);
             if(ConfigData.debug) {
                 Messenger.consoleMsg(MessageType.PLAYER_REMOVED, playerName);
-            }
 
-            Messenger.playerMsg(MessageType.ENDCHAT, playerName);
+                Messenger.playerMsg(MessageType.ENDCHAT, playerName);
+            }
         }else{
             Messenger.consoleMsg(MessageType.PLAYER_NOT_FOUND, playerName);
         }
